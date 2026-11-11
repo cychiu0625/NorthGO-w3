@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/privacy-policy",
+      "destination": "/legal/privacy-policy",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/legal/cookie-policy",
+      "permanent": true
+    },
+    {
+      "source": "/disclaimer",
+      "destination": "/legal/disclaimer",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+      ]
+    }
+  ]
+}
